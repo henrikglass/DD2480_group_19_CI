@@ -10,7 +10,7 @@ history = None
 
 @app.route("/", methods = ['GET','POST'])
 def hello():
-    print("is json")
+    print("is json??")
     print(request.is_json)
     data = request.get_json()# Load JSON data sent with POST request
     #print(data)
