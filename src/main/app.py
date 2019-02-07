@@ -11,8 +11,8 @@ history = None
 @app.route("/", methods = ['GET','POST'])
 def hello():
 
-    data = request.json# Load JSON data sent with POST request
-    print(data)
+    data = request.get_json()# Load JSON data sent with POST request
+    #print(data)
     exit_code = repo_test(data)
     print("Exit code is: ")
     print(exit_code)
