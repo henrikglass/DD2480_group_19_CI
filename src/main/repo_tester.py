@@ -14,8 +14,8 @@ Output:
 """                                                                             
 def repo_test(json_str):                                                        
     # get important stuff                                                       
-    #payload = json.loads(json_str)                                              
-    payload = json_str
+    payload = json.loads(json_str)                                              
+    #payload = json_str
     branch_name = payload["pull_request"]["head"]["ref"]                        
     ssh_url = payload["pull_request"]["head"]["repo"]["ssh_url"]                
     clone_url = payload["pull_request"]["head"]["repo"]["clone_url"]            
